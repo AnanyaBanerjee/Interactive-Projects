@@ -14,35 +14,8 @@ import numpy as np
 import pydeck as pdk
 import plotly.express as px
 import plotly.graph_objects as go
-
 from time import time
-from nltk.tokenize import sent_tokenize, word_tokenize
-from nltk.corpus import stopwords
-from nltk.stem import PorterStemmer
-from textblob import Word
-from textblob import TextBlob
-from sklearn.feature_extraction.text import CountVectorizer
-import nltk
-from sklearn.decomposition import TruncatedSVD
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import cross_val_predict
-from sklearn.model_selection import StratifiedKFold
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import log_loss, accuracy_score
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.svm import SVC
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import LabelEncoder
-from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.metrics import log_loss,confusion_matrix,classification_report,roc_curve,auc
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import RandomizedSearchCV
-from scipy.stats import randint as sp_randint
-from sklearn.metrics import recall_score
-from sklearn.decomposition import NMF, LatentDirichletAllocation
-from sklearn.cluster import KMeans
+
 import joblib
 import altair as alt
 
