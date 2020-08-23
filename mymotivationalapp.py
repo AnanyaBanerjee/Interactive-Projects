@@ -31,12 +31,29 @@ DATA_URL_TRAIN= (
 #vectorizer=joblib.load("Vectorizers/vectorizer_toxic.sav")
 
 st.title("Welcome to your daily dose of motivation!😊")
-st.markdown("This application is a Streamlit dashboard that can be used to display a motivational quote!")
+#st.write("𝕄𝕠𝕥𝕚𝕧𝕒𝕥𝕖❕ 𝕀𝕕𝕖𝕒𝕥𝕖❕ 𝕀𝕟𝕟𝕠𝕧𝕒𝕥𝕖❕ 𝕀𝕟𝕤𝕡𝕚𝕣𝕖❕")
+st.markdown("𝑴𝒐𝒕𝒊𝒗𝒂𝒕𝒆❗ 𝑰𝒅𝒆𝒂𝒕𝒆❗ 𝑰𝒏𝒏𝒐𝒗𝒂𝒕𝒆❗ 𝑰𝒏𝒔𝒑𝒊𝒓𝒆❗")
+#st.markdown("🅼🅾🆃🅸🆅🅰🆃🅴❗ 🅸🅳🅴🅰🆃🅴❗ 🅸🅽🅽🅾🆅🅰🆃🅴❗ 🅸🅽🆂🅿🅸🆁🅴❗")
+#st.markdown("Mᴏᴛɪᴠᴀᴛᴇ! Iᴅᴇᴀᴛᴇ! Iɴɴᴏᴠᴀᴛᴇ! Iɴsᴘɪʀᴇ!")
+st.markdown("> This application is a Streamlit dashboard that can be used to display a motivational quote!")
 #st.markdown("### My first streammlit dashboard")
 
-st.sidebar.title("About")
+st.markdown("<div align='center'><br>"
+                "<img src='https://img.shields.io/badge/MADE%20WITH-PYTHON%20-red?style=for-the-badge'"
+                "alt='API stability' height='25'/>"
+                "<img src='https://img.shields.io/badge/SERVED%20WITH-Heroku-blue?style=for-the-badge'"
+                "alt='API stability' height='25'/>"
+                "<img src='https://img.shields.io/badge/DASHBOARDING%20WITH-Streamlit-green?style=for-the-badge'"
+                "alt='API stability' height='25'/></div>", unsafe_allow_html=True)
+
+
+st.sidebar.title("\n About")
 
 st.sidebar.info("This is a demo application written for exploring motivational quotes!")
+
+st.write("\n")
+st.write("\n")
+st.write("\n")
 
 #display image
 from PIL import Image
@@ -87,7 +104,7 @@ original_data= data
 
 
 #another ## QUESTION:
-st.header("How many motivational quotes would you like to view?")
+st.header("\n How many motivational quotes would you like to view?🤔💭")
 #
 #st.markdown("")
 num_datapoints = st.selectbox(
@@ -95,12 +112,23 @@ num_datapoints = st.selectbox(
      )
 
 
-st.header("Your customized motivational thoughts!")
+#st.header("Your customized motivational thoughts!")
+st.header("𝒞𝓊𝓈𝓉ℴ𝓂𝒾𝓏ℯ𝒹 ℳℴ𝓉𝒾𝓋𝒶𝓉𝒾ℴ𝓃!")
 #sample 5 motivational comments
-cl = data['Quote'].sample(num_datapoints).values
+cl = list(data['Quote'].sample(num_datapoints).values)
 #a=list(cl['comment_text'])
 #st.write(a)
 st.table(cl)
+
+
+re=st.selectbox("Would you like to know the author of this quote?", ['N/A','No','Yes'])
+if re=='Yes':
+    for i in range(len(cl)):
+        st.write("\n For the quote '",cl[i],"', the author is",list(data.loc[data['Quote']==cl[i]]['Author'])[0])
+
+elif re=='No':
+    st.markdown("Cool! ")
+
 
 #Ques
 st.header("The motivational thoughts belong to these categories!")
