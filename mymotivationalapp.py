@@ -30,12 +30,14 @@ DATA_URL_TRAIN= (
 #load the individual vectorizer from disk
 #vectorizer=joblib.load("Vectorizers/vectorizer_toxic.sav")
 
-st.title("Welcome to your daily dose of motivation!😊")
+#st.title("Welcome to your daily dose of motivation!😊")
+st.title(" 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐝𝐚𝐢𝐥𝐲 𝐝𝐨𝐬𝐞 𝐨𝐟 𝐦𝐨𝐭𝐢𝐯𝐚𝐭𝐢𝐨𝐧!😊")
 #st.write("𝕄𝕠𝕥𝕚𝕧𝕒𝕥𝕖❕ 𝕀𝕕𝕖𝕒𝕥𝕖❕ 𝕀𝕟𝕟𝕠𝕧𝕒𝕥𝕖❕ 𝕀𝕟𝕤𝕡𝕚𝕣𝕖❕")
 st.markdown("𝑴𝒐𝒕𝒊𝒗𝒂𝒕𝒆❗ 𝑰𝒅𝒆𝒂𝒕𝒆❗ 𝑰𝒏𝒏𝒐𝒗𝒂𝒕𝒆❗ 𝑰𝒏𝒔𝒑𝒊𝒓𝒆❗")
 #st.markdown("🅼🅾🆃🅸🆅🅰🆃🅴❗ 🅸🅳🅴🅰🆃🅴❗ 🅸🅽🅽🅾🆅🅰🆃🅴❗ 🅸🅽🆂🅿🅸🆁🅴❗")
 #st.markdown("Mᴏᴛɪᴠᴀᴛᴇ! Iᴅᴇᴀᴛᴇ! Iɴɴᴏᴠᴀᴛᴇ! Iɴsᴘɪʀᴇ!")
-st.markdown("> This application is a Streamlit dashboard that can be used to display a motivational quote!")
+#st.markdown("> This application is a Streamlit dashboard that can be used to display a motivational quote!")
+st.markdown("> 𝘛𝘩𝘪𝘴 𝘢𝘱𝘱𝘭𝘪𝘤𝘢𝘵𝘪𝘰𝘯 𝘪𝘴 𝘢 𝘚𝘵𝘳𝘦𝘢𝘮𝘭𝘪𝘵 𝘥𝘢𝘴𝘩𝘣𝘰𝘢𝘳𝘥 𝘵𝘩𝘢𝘵 𝘤𝘢𝘯 𝘣𝘦 𝘶𝘴𝘦𝘥 𝘵𝘰 𝘥𝘪𝘴𝘱𝘭𝘢𝘺 𝘢 𝘮𝘰𝘵𝘪𝘷𝘢𝘵𝘪𝘰𝘯𝘢𝘭 𝘲𝘶𝘰𝘵𝘦!")
 #st.markdown("### My first streammlit dashboard")
 
 st.markdown("<div align='center'><br>"
@@ -57,10 +59,11 @@ st.write("\n")
 
 #display image
 from PIL import Image
-im = Image.open('m5.jpg')
-image=im.resize((int(im.size[0]/2),int(im.size[1]/2)), 0)
-#image=im
+im = Image.open('ana.jpg')
+#image=im.resize((int(im.size[0]/2),int(im.size[1]/2)), 0)
+image=im
 st.image(image) #use_column_width=True)
+
 
 #st.write("𝓑𝓮𝓵𝓲𝓮𝓿𝓮 𝓲𝓷 𝔂𝓸𝓾𝓻𝓼𝓮𝓵𝓯❗")
 
@@ -208,7 +211,7 @@ if st.checkbox("Show Raw Data", False):
     #st.altair_chart(c, width=-1)
     #another # QUESTION:
     st.header("𝕮𝖍𝖔𝖎𝖈𝖊 𝖔𝖋 𝖌𝖗𝖆𝖕𝖍 𝖆𝖘 𝖕𝖊𝖗 𝖈𝖆𝖙𝖊𝖌𝖔𝖗𝖞❗")
-    column = st.selectbox('Categories', list(np.unique(data['Category'])))
+    column = st.selectbox('ℭ𝔞𝔱𝔢𝔤𝔬𝔯𝔦𝔢𝔰', list(np.unique(data['Category'])))
     st.area_chart(data.loc[data['Category']==column, 'Quote'].head(100))
 
 
