@@ -4,8 +4,6 @@ https://mymotivationalapp.herokuapp.com/
 
 A short demo for this application is as shown below:
 
-<video src="my_video.mp4" poster="poster.jpg" width="320" height="200" controls preload></video>
-
-![Demo](my_video.mp4)
+![The Application](my_video.gif)
 
 [Link to Application](https://mymotivationalapp.herokuapp.com/)
