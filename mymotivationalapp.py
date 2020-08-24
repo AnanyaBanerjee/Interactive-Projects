@@ -184,6 +184,14 @@ if ans=='Yes':
    d1=list(data[data['Category']==d]['Quote'].sample(1))[0]
    st.write("​​​​​​​​​​𝒴ℴ𝓊𝓇 𝓂ℴ𝓉𝒾𝓋𝒶𝓉𝒾ℴ𝓃𝒶𝓁 𝓆𝓊ℴ𝓉ℯ:")
    st.markdown(d1)
+   st.write("𝒜𝓊𝓉𝒽ℴ𝓇 :")
+   d2=list(data[data['Quote']==d1]['Author'])[0]
+   d3=d2.split(",")
+   st.markdown(d3[0])
+   if len(d3)!=1:
+       st.write("𝒮ℴ𝓊𝓇𝒸ℯ :")
+       st.markdown(d3[1])
+
 else:
     st.markdown("Your wish is my command! 😊")
 
