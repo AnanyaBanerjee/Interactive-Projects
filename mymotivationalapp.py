@@ -120,6 +120,11 @@ cl = list(data['Quote'].sample(num_datapoints).values)
 #st.write(a)
 st.table(cl)
 
+st.markdown("<div align='center'><br>"
+                "<img src='https://img.shields.io/badge/Self%20Motivate-red?style=for-the-badge&logo=appveyor'"
+                "alt='API stability' height='25'/></div>", unsafe_allow_html=True)
+
+
 
 re=st.selectbox("Would you like to know the author of this quote?", ['N/A','No','Yes'])
 if re=='Yes':
@@ -173,6 +178,7 @@ else:
 
 
 
+
 if st.checkbox("Show Raw Data", False):
     st.subheader('Raw_Data')
     st.write(data.head(100))
@@ -192,3 +198,16 @@ if st.checkbox("Show Raw Data", False):
     st.header("Choice of graph as per category!")
     column = st.selectbox('Categories', list(np.unique(data['Category'])))
     st.area_chart(data.loc[data['Category']==column, 'Quote'].head(100))
+
+
+
+
+st.markdown("<div align='center'><br>"
+                "<img src='https://img.shields.io/badge/Self%20Motivate-red?style=for-the-badge&logo=appveyor'"
+                "alt='API stability' height='25'/>"
+                "<img src='https://img.shields.io/badge/-Ideate-green?style=for-the-badge&logo=appveyor'"
+                "alt='API stability' height='25'/>"
+                "<img src='https://img.shields.io/badge/-Innovate-yellow?style=for-the-badge&logo=appveyor'"
+                "alt='API stability' height='25'/>"
+                "<img src='https://img.shields.io/badge/-Inspire-informational?style=for-the-badge&logo=appveyor'"
+                "alt='API stability' height='25'/></div>", unsafe_allow_html=True)
