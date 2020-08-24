@@ -155,7 +155,7 @@ if re=='Yes':
         if len(fd1)!=1:
             st.write("\n 𝒜𝓊𝓉𝒽ℴ𝓇:  ",fd1[0], " ||| 𝒮ℴ𝓊𝓇𝒸ℯ:  ",fd1[1])
 
-elif re=='No':
+elif re=='No' or re=='N/A':
     st.markdown("Cool! ")
 
 
@@ -188,7 +188,7 @@ st.write(data['Category'].value_counts())
 #
 #st.header("Would you like to choose the category to which your thought of the data should belong to?")
 st.header("𝐖𝐨𝐮𝐥𝐝 𝐲𝐨𝐮 𝐥𝐢𝐤𝐞 𝐭𝐨 𝐜𝐡𝐨𝐨𝐬𝐞 𝐭𝐡𝐞 𝐜𝐚𝐭𝐞𝐠𝐨𝐫𝐲 𝐭𝐨 𝐰𝐡𝐢𝐜𝐡 𝐲𝐨𝐮𝐫 𝐭𝐡𝐨𝐮𝐠𝐡𝐭 𝐨𝐟 𝐭𝐡𝐞 𝐝𝐚𝐭𝐚 𝐬𝐡𝐨𝐮𝐥𝐝 𝐛𝐞𝐥𝐨𝐧𝐠 𝐭𝐨❓")
-ans=st.selectbox("Choice", ['Yes','No'])
+ans=st.selectbox("Choice", ['N/A','Yes','No'])
 
 if ans=='Yes':
    d=st.selectbox("Which category would you like to see?", labels)
@@ -204,8 +204,8 @@ if ans=='Yes':
        st.write("𝒮ℴ𝓊𝓇𝒸ℯ :")
        st.markdown(d3[1])
 
-else:
-    st.markdown("Your wish is my command! 😊")
+elif ans=='No' or ans=='N/A':
+    st.markdown("𝔜𝔬𝔲𝔯 𝔴𝔦𝔰𝔥 𝔦𝔰 𝔪𝔶 𝔠𝔬𝔪𝔪𝔞𝔫𝔡! 😊")
 
 
 
