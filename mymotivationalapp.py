@@ -148,7 +148,12 @@ for i in range(len(cl)):
 re=st.selectbox("Would you like to know the author of this quote?", ['N/A','No','Yes'])
 if re=='Yes':
     for i in range(len(cl)):
-        st.write("\n For the quote '",cl[i],"', the author is",list(data.loc[data['Quote']==cl[i]]['Author'])[0])
+        fd=list(data.loc[data['Quote']==cl[i]]['Author'])[0]
+        fd1=fd.split(",")
+        if len(fd1)==1:
+            st.write("\n 𝒜𝓊𝓉𝒽ℴ𝓇:  ",fd1[0])
+        if len(fd1)!=1:
+            st.write("\n 𝒜𝓊𝓉𝒽ℴ𝓇:  ",fd1[0], " ||| 𝒮ℴ𝓊𝓇𝒸ℯ:  ",fd1[1])
 
 elif re=='No':
     st.markdown("Cool! ")
