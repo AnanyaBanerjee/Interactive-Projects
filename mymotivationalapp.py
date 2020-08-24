@@ -53,6 +53,13 @@ st.sidebar.title("\n About")
 
 st.sidebar.info("This is a demo application written for exploring motivational quotes!")
 
+#st.sidebar.info("Data used :")
+
+link_to_data = st.sidebar.text_input('Link to data used: ',
+                                         "https://www.kaggle.com/akmittal/quotes-dataset")
+st.sidebar.info(link_to_data)
+
+
 st.write("\n")
 st.write("\n")
 st.write("\n")
