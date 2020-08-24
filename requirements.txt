@@ -1,0 +1,7 @@
+streamlit==0.64.0
+plotly==4.9.0
+pydeck==0.4.1
+altair==4.1.0
+pandas==1.0.1
+numpy==1.18.1
+joblib==0.14.1
